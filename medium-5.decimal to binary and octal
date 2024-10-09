@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class DecimalConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int decimalNumber = scanner.nextInt();
+        String binary = Integer.toBinaryString(decimalNumber);
+        System.out.println("Binary equivalent: " + binary);
+        String octal = Integer.toOctalString(decimalNumber);
+        System.out.println("Octal equivalent: " + octal);
+
+        scanner.close();
+    }
+}
