@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class SpecialCharacterPrinter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        System.out.println("Special characters in the string:");
+        for (char c : input.toCharArray()) {
+            if (!Character.isLetterOrDigit(c)) {
+                System.out.println(c); 
+            }
+        }
+    }
+}
