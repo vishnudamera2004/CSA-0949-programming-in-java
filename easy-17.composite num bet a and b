@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class CompositeNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input the range a and b
+        System.out.print("Enter the value of a: ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b: ");
+        int b = sc.nextInt();
+
+        System.out.println("Composite numbers between " + a + " and " + b + " are:");
+        
+        // Loop through the range
+        for (int i = a; i <= b; i++) {
+            if (isComposite(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        sc.close();
+    }
+
+    // Method to check if a number is composite
+    public static boolean isComposite(int n) {
+        if (n < 4) { // Numbers less than 4 are not composite
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return true; // If divisible by any number other than 1 and itself
+            }
+        }
+        return false;
+    }
+}
