@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class CharacterInString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        System.out.print("Enter a character to search: ");
+        char searchChar = scanner.next().charAt(0);
+
+        // Check if the character is present in the string
+        boolean isPresent = inputString.indexOf(searchChar) != -1;
+
+        if (isPresent) {
+            System.out.println("The character '" + searchChar + "' is present in the string.");
+        } else {
+            System.out.println("The character '" + searchChar + "' is not present in the string.");
+        }
+
+        scanner.close();
+    }
+}
