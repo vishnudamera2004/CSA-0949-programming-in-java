@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ClassifyMarks {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the student's marks: ");
+        int marks = scanner.nextInt();
+        if (marks >= 60) {
+            System.out.println("The student is in First Class.");
+        } else if (marks >= 40) {
+            System.out.println("The student is in Second Class.");
+        } else {
+            System.out.println("The student has failed.");
+        }
+
+        scanner.close();
+    }
+}
