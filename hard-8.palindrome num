@@ -1,0 +1,27 @@
+public class PalindromeNumber {
+    public static void main(String[] args) {
+        int number = 195; 
+        int reverse, sum;
+
+        while (!isPalindrome(number)) {
+            reverse = reverseNumber(number);
+            sum = number + reverse;
+            System.out.println(number + " + " + reverse + " = " + sum);
+            number = sum;
+        }
+
+        System.out.println("Palindrome number is: " + number);
+    }
+    public static boolean isPalindrome(int num) {
+        int reverse = reverseNumber(num);
+        return num == reverse;
+    }
+    public static int reverseNumber(int num) {
+        int reverse = 0;
+        while (num != 0) {
+            reverse = reverse * 10 + num % 10;
+            num /= 10;
+        }
+        return reverse;
+    }
+}
