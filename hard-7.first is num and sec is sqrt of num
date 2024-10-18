@@ -1,0 +1,9 @@
+public class NumberAndSquare {
+    public static void main(String[] args) {
+        int limit = 10;
+
+        for (int i = 1; i <= limit; i++) {
+            System.out.println(i + " " + (i * i));
+        }
+    }
+}
