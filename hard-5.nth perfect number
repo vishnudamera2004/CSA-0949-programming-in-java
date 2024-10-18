@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class NthPerfectNumber {
+    public static void main(String[] args) {
+        int count = 0; 
+        int num = 1;     
+        
+        int nth = 3;   
+
+        while (count < nth) {
+            int sum = 0;
+
+           
+            for (int i = 1; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    sum += i;
+                }
+            }
+            if (sum == num) {
+                count++;  // Increment perfect number count
+                if (count == nth) {
+                    System.out.println(nth + "th perfect number is: " + num);
+                }
+            }
+            num++;
+        }
+    }
+}
