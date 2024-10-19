@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class armstrongnumber
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner=new Scanner(System.in);
+        int first=0,second=1,next;
+        System.out.print("enter a number:");
+        int n=scanner.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            System.out.println("fibonacci series is :" +first);
+            next=first+second;
+            first=second;
+            second=next;
+        }
+    }
+    
+}
